@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blackColor: #000;
+  --accentColor: #023047;
+  --grayColor: #333333;
+  --lightColor: #fff;
+  --accentTextColor: #CE220E;
+  --lightGrayColor: #dcdcdc;
+
+  --headerHeight: 100px;
+
+  --transition: all .3s;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.body.overflow {
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  height: var(--headerHeight);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 3px solid var(--grayColor);
+}
+
+.burger-button {
+  display: none; /* flex - видно, none - не видно */
+  width: 40px;
+  height: 30px;
+  align-items: center;
+  position: relative;
+}
+
+.burger-button span {
+  height: 3px;
+  width: 100%;
+  display: block;
+  transform: scale(1);
+  background-color: var(--blackColor);
+  transition: all .5s;
+}
+
+.burger-button::after, .burger-button::before {
+  height: 3px;
+  width: 100%;
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: var(--blackColor);
+  transition: all .5s;
+}
+
+.burger-button::after {
+  bottom: 0;
+}
+
+.burger-button::before {
+  top: 0;
+}
+
+.burger-menu.menu-open {
+  display: block;
+  width: 75%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 900;
+  background-color: var(--lightColor);
+  border: 5px solid var(--blackColor);
+  transition: all .5s;
+  animation: openBurgerMenu .7s 1;
+}
+
+.burger-menu.menu-closed {
+  display: none;
+}
+
+.burger-menu__closed-button {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  position: relative;
+  z-index: 900;
+  margin: 15px 0 25px 15px;
+}
+
+.burger-menu__closed-button::after, .burger-menu__closed-button::before {
+  height: 5px;
+  width: 100%;
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: white; 
+}
+
+.burger-menu__closed-button::after {
+  transform: rotate(45deg);
+  background-color: var(--blackColor);
+}
+
+.burger-menu__closed-button::before {
+  transform: rotate(-45deg);
+  background-color: var(--blackColor);
+}
+
+.burger-menu__nav {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.burger-menu__nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  font-size: clamp(40px, 3vw, 80px);
+}
+
+.burger-menu__nav-item {
+  text-decoration: none;
+  color: var(--blackColor);
+  transition: var(--transition);
+}
+
+.burger-menu__nav-item:hover {
+  color: var(--accentTextColor);
+}
+
+.header-logo {
+  font-size: clamp(25px, 2.5vw, 80px);
+  color: var(--accentColor);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.header-logo:hover {
+  color: var(--accentTextColor);
+}
+
+.nav-menu-list {
+  display: flex;
+}
+
+.nav-menu__item {
+  list-style: none;
+  margin: 15px;
+  font-size: clamp(25px, 2.5vw, 80px);
+}
+
+.nav-menu__link {
+  color: var(--blackColor);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.nav-menu__link:hover {
+  color: var(--accentTextColor);
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.home-section {
+  height: calc(100% - var(--headerHeight));
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  letter-spacing: -1.5px;
+  color: var(--grayColor);
+}
+
+.home-title {
+  font-size: clamp(32px, 2.5vw, 80px);
+  font-weight: 500;
+}
+
+.home-sub-title {
+  font-size: clamp(32px, 2.5vw, 80px);
+  margin: 0 0 50px 0;
+}
+
+.contact-btn {
+  padding: 15px;
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accentColor);
+  color: var(--lightColor);
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-btn:hover {
+  -webkit-box-shadow: 0px 0px 50px 14px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 0px 50px 14px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 0px 50px 14px rgba(0, 0, 0, 0.24);
+}
+
+.hero {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero__img {
+  max-width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  position: static;
+
+  -webkit-box-shadow: 0px 0px 45px 23px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0px 0px 45px 23px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 0px 45px 23px rgba(0, 0, 0, 0.33);
+}
+
+.about-section {
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 150px;
+  padding: 100px 0 0 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(32px, 2.5vw, 80px);
+  margin-bottom: 50px;
+}
+
+.text-info-container {
+  width: 90%;
+  font-size: clamp(24px, 1.5vw, 45px);
+}
+
+.accent-text {
+  color: var(--accentTextColor);
+}
+
+.no-accent {
+  color: var(--blackColor);
+}
+
+.text-list {
+  margin-left: 15px;
+}
+
+.hide {
+  display: none;
+}
+
+.hide + label ~ div{
+  display: none;
+}
+/* оформляем текст label */
+.hide + label {
+  transition: var(--transition);
+  cursor: pointer;
+}
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+  color: var(--accentColor);
+  border-bottom: 0;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+  display: block; 
+  background: var(--lightGrayColor);
+  border-radius: 10px;
+  padding: 20px; 
+}
+
+.footer {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: clamp(25px, 1.5vw, 45px);
+  color: var(--lightColor);
+  background-color: var(--grayColor);
+}
+
+.telegramm-link {
+  text-decoration: none;
+  color: var(--lightColor);
+  transition: var(--transition);
+}
+
+.telegramm-link:hover{
+  color: var(--accentTextColor);
+}
+
+.footer-nav-menu__link {
+  color: var(--lightColor);
+}
+
+/* animation */
+
+@keyframes openBurgerMenu {
+  from {
+    margin-right: -75%;
+  }
+  to {
+    margin-right: 0%;
+  }
+}

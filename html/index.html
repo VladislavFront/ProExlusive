@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;700&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/adaptive.css">
+
+  <title>pro.Exlusive</title>
+</head>
+<body class="body">
+
+  <div class="burger-menu menu-closed">
+    <div class="burger-menu__closed-button" onclick="closedBurgerMenu()"></div>
+    <nav class="burger-menu__nav">
+      <ul class="burger-menu__nav-list">
+        <li><a href="#home" class="burger-menu__nav-item" onclick="navItem()">Главная</a></li>
+        <li><a href="#about" class="burger-menu__nav-item" onclick="navItem()">О нас</a></li>
+        <li><a href="#contact" class="burger-menu__nav-item" onclick="navItem()">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <header class="header" id="home">
+    <a href="#home" class="header-logo">pro.Exlusive</a>
+    <nav class="nav-menu header-nav-menu">
+      <ul class="nav-menu-list">
+        <li class="nav-menu__item"><a href="#home" class="nav-menu__link">Главная</a></li>
+        <li class="nav-menu__item"><a href="#about" class="nav-menu__link">О нас</a></li>
+        <li class="nav-menu__item"><a href="#contact" class="nav-menu__link">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="burger-button" onclick="openBurgerMenu()">
+      <span class="burger-button__span"></span>
+    </div>
+  </header>
+
+  <section class="section home-section">
+    <div class="info-container">
+      <h1 class="home-title">Продажа мировых брендов по привлекательной цене.</h1>
+      <h2 class="home-sub-title">Весь мир в кармане!</h2>
+      <a href="#contact" class="contact-btn">Связаться с нами</a>
+    </div>
+    <div class="hero">
+      <img src="../img/girl.jpg" alt="" class="hero__img" width="450px" height="720px">
+    </div>
+  </section>
+
+  <section class="section about-section" id="about">
+    <h2 class="section-title">О нас</h2>
+    <div class="text-info-container">
+      Всем привет, меня зовут Марина. <br>
+      <br>
+      Я - Ваш проводник в мир моды, шика, изящества, женственности и совершенства. Здесь по очень приемлемым ценам Вы сможете приобрести известные марки, ставшие хитами десятилетий и полюбившиеся всем: <br>
+      Max Mara, КarlLagerfeld, Tommy Hilfiger, Ralph Lauren, и многие другие. <br>
+      Предлагаю товар, произведенный фабриками поднебесной, т.е в Китае. 
+      Сотрудничаю с агентами, которые имеют прямое взаимодействие с фабриками. <br>
+      <br>
+
+      <input type="checkbox" id="hd-1" class="hide">
+      <label for="hd-1">"Почему КИТАЙ?"</label> 
+      <div> 
+        А все потому, что Китай – это страна с хорошим производственным потенциалом. В государстве выпускается много разной продукции, созданы отменные условия для развития торговых отношений. 
+        В мире моды и текстильной индустрии Китай давно уже стал своего рода «центром производства». Это касается как масс-маркета, так и премиальных марок.
+        Активному развитию способствовала разумная стратегия. Китай воспользовался теми ресурсами, которые имел: <br>
+        <br>
+        <ul class="text-list">
+          <li class="text-list-item">Дешевая рабочая сила;</li>
+          <li class="text-list-item">Достаточно территорий для развития;</li>
+          <li class="text-list-item">Большой внутренний рынок;</li>
+          <li class="text-list-item">Менталитет общества.</li>
+        </ul>
+        <br>
+        В Китае существует множество высокотехнологичных фабрик, оснащенных современным оборудованием. Они контролируют качество продукции на каждом этапе производства. Предприниматели часто заказывают конкретную партию предметов на фабриках. <br>
+      </div> 
+
+      <br>
+      <br>
+
+      <input type="checkbox" id="hd-2" class="hide">
+      <label for="hd-2">Каким образом проконтролировать качество и повлиять на поставщика?</label> 
+      <div>брендов
+        Самостоятельно следить за производством каждого образца невозможно. Для проверок используют агентов по контролю.
+        Я сотрудничаю с агентами, которые имееют прямое взаимодействие c фабриками.
+      </div>
+
+      <br>
+      <br>
+
+      <input type="checkbox" id="hd-3" class="hide">
+      <label for="hd-3">Основные приимущества</label>
+      <div>
+        У нас на одежду, обувь, сумки и товары для красоты цены ниже, чем в брендовых магазинах любого города нашей страны.
+      </div>
+
+      <br>
+      <br>
+
+      <input type="checkbox" id="hd-4" class="hide">
+      <label for="hd-4">ВНИМАНИЕ!</label> 
+      <div>
+        Я работаю с остатками от производства известных брендов. Поясню, что это значит: компания может заказать на фабрике 15000 экземпляров. Фабрика отошьет 18000. Вот эти 3000 мы будем иметь возможность покупать. Возможно, что товар будет иметь незначительный дефект: неровный шов, отсутствие этикетки. Так называеиый брак, который не видно. Золотые стандарты задает каждый именитый бренд для своего производства. Если обнаружили брак, то такой товар списывается брендом. Но китайцы нашли быстро выход из сложившийся ситуации, находя посредников, кому сбыть даный товар. Также может отсутсвовать коробка от обуви, футляр от очков, кофр для пальто и т.д. Но это не влияет на итоговый результат. А есть супервыгода приобрести товар, по такой же супервыгодной цене. <br>
+      </div>
+      <br>
+      <br>
+        Приятных вам покупок!
+      </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="contact-container">
+      <h2 class="phone">Телефон: 8 902 858 40 42</h2>
+      <h2 class="telegramm"><a href="https://t.me/+Fsik1DpfFLxiYjcy" class="telegramm-link">Телеграмм-группа</a></h2>
+    </div>
+    <nav class="nav-menu">
+      <ul class="footer-nav-menu-list">
+        <li class="nav-menu__item nav-menu__item-footer"><a href="#home" class="nav-menu__link footer-nav-menu__link">Главная</a></li>
+        <li class="nav-menu__item nav-menu__item-footer"><a href="#about" class="nav-menu__link footer-nav-menu__link">О нас</a></li>
+        <li class="nav-menu__item nav-menu__item-footer"><a href="#contact" class="nav-menu__link footer-nav-menu__link">Контакты</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="../js/index.js"></script>
+</body>
+</html>
